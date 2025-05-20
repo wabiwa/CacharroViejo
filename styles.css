@@ -1,0 +1,124 @@
+.boton-navbar{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-color{
+    width: 100px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:15px;
+    padding:20px;
+    margin:10px auto 5px;
+}
+
+.img-auto{
+    border-radius: 10px;
+}
+
+.boton-comprar{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:15px;
+    padding:20px;
+    margin:5px auto 5px;
+}
+
+.card-text{
+    padding: 20px;
+    padding-bottom: 35px;
+    font-size:18px;
+    justify-content: center;
+}
+
+.titulo-navbar{
+    font-weight: 700;
+    font-size: 70px;
+    text-align: center;
+}
+
+.subtitulo-navbar{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+
+.barra{
+    margin-bottom:100px;
+}
+
+.producto{
+    margin:300px auto 300px;
+    display:flex;
+    width: 1000px;
+}
+
+.resumen{
+    margin:300px auto 300px;
+    display:flex;
+    width: 1000px;
+}
+
+.card-title{
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+}
+
+.titulo-color{
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.titulo-footer{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
+
+.p-footer{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.footer{
+    margin-top:300px;
+}
+
+.lista-auto {
+  height: 240px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.lista-auto .list-group-item {
+  flex: 0 0 auto;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.precio{
+    font-weight: 700;
+    font-size:25px;
+    text-align: center;
+    padding:20px;
+}
