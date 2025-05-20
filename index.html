@@ -13,24 +13,12 @@
     <!-- Navbar -->
     <nav class="navbar bg-light border border-dark barra">
         <div class="container-fluid">
-            <div class="row w-100 align-items-center">
-                <div class="col-2 d-flex align-items-center">
-                    <img src="Imagenes/logo.png" alt="" width="230" height="150">
-                </div>
-                <div class="col-2 align-items-center">
-                    <a href="#producto" class="btn btn-dark btn-lg boton-navbar" role="button">Auto</a>
-                </div>
-                <div class="col-2 align-items-center">
-                    <a href="#" class="btn btn-dark btn-lg boton-navbar" role="button">Descripción</a>
-                </div>
-                <div class="col-2 align-items-center">
-                    <a href="#footer" class="btn btn-dark btn-lg boton-navbar" role="button">Redes sociales</a>
-                </div>
-                <div class="col-4 align-items-center text-center">
-                    <h1 class="text-center text-dark titulo-navbar">Cacharro Viejo</h1>
-                    <h5 class="text-center text-dark subtitulo-navbar">Mejores autos a Mejores precios</h5>
-                </div>
+            <img src="Imagenes/logo.png" alt="" width="230" height="150">
+            <div class="align-items-center text-center">
+                <h1 class="text-center text-dark titulo-navbar">Cacharro Viejo</h1>
+                <h5 class="text-center text-dark subtitulo-navbar">Mejores autos a Mejores precios</h5>
             </div>
+            <img src="Imagenes/logo.png" alt="" width="230" height="150">
         </div>
     </nav>
     <!-- Producto -->
@@ -43,6 +31,7 @@
                 <div class="col-md-5 justify-content-center d-flex flex-column">
                     <h2 class="card-title">Toyota AE86</h2>
                     <div class="row align-items-center">
+                        <!-- Colores -->
                         <h2 class="titulo-color text-center">Colores</h2>
                         <div class="col-md-4 d-flex">
                             <button class="btn btn-dark btn-lg boton-color" id="boton-blanco">Blanco</button>
@@ -55,29 +44,36 @@
                         </div>
                     </div>
                     <div class="row align-items-center">
+                        <!-- Adicionales -->
                         <h2 class="titulo-color text-center">Adicionales</h2>
                         <div class="col-md-4 d-flex">
-                            <button class="btn btn-dark btn-lg boton-color">Neblinero</button>
+                            <button class="btn btn-dark btn-lg boton-color" id="neblinero">Neblinero</button>
                         </div>
                         <div class="col-md-4 d-flex">
-                            <button class="btn btn-dark btn-lg boton-color">Portaequipaje</button>
+                            <button class="btn btn-dark btn-lg boton-color" id="portaequipaje">Portaequipaje</button>
                         </div>
                         <div class="col-md-4 d-flex"> 
-                            <button class="btn btn-dark btn-lg boton-color">Cinturones y Arnes</button>
+                            <button class="btn btn-dark btn-lg boton-color" id="cinturones">Cinturones y Arnes</button>
                         </div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col-md-6 d-flex">
-                            <button class="btn btn-dark btn-lg boton-color">Luces LED</button>
+                            <button class="btn btn-dark btn-lg boton-color" id="luces">Luces LED</button>
                         </div>
                         <div class="col-md-6 d-flex">
-                            <button class="btn btn-dark btn-lg boton-color">Cámara Trasera</button>
+                            <button class="btn btn-dark btn-lg boton-color" id="camara">Cámara Trasera</button>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md d-flex">
+                            <button class="btn btn-dark btn-lg boton-reset" id="reset">Resetear adicionales</button>
                         </div>
                     </div>
                     <hr>
                     <div class="row align-items-center">
+                        <!-- Botón comprar -->
                         <div class="col-md d-flex">
-                            <a href="paginas/resumen_venta.html" class="btn btn-success boton-comprar" role="button"> Comprar </a>
+                            <a href="paginas/resumen_venta.html" class="btn btn-success boton-comprar" role="button" id="comprar"> Comprar </a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +92,7 @@
      <!-- Footer -->
       <div class="container-fluid border border-dark footer" id="footer">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 border border dark">
             <div class="container-fluid redes-sociales">
                 <div class="row text-center">
                     <h3 class="titulo-footer">Nuestras redes sociales</h3>
