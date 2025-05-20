@@ -177,7 +177,7 @@ window.addEventListener('load', () => {
 
     const lista = document.getElementById('lista-auto');
     if (lista) {
-    lista.innerHTML = '';
+        lista.innerHTML = '';
     }
 
     const agregados = JSON.parse(localStorage.getItem('agregados')) || [];
@@ -187,14 +187,19 @@ window.addEventListener('load', () => {
         const liColor = document.createElement('li');
         liColor.className = 'list-group-item';
         liColor.textContent = `Color: ${color}`;
-        lista.appendChild(liColor);
+        if (lista){
+            lista.appendChild(liColor);
+        }
     }
 
     agregados.forEach(function(item){
         const li = document.createElement('li');
         li.className = 'list-group-item';
         li.textContent = item;
-        lista.appendChild(li);
+        if (lista){
+            lista.appendChild(li);
+        }
+
     });
 
     const valor_base = 3500000;
