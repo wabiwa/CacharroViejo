@@ -11,6 +11,39 @@ function cambiar_color(color){
     localStorage.setItem('color_auto_2', '../' + color)
 };
 
+const botones_color = ['boton-blanco','boton-rojo','boton-negro'];
+const clases_cambio = ['cambio-blanco', 'cambio-rojo', 'cambio-negro'];
+
+function marcar_boton_seleccionado_color(id_seleccionado,clase_aplicar){
+    botones_color.forEach(id =>{
+        const boton = document.getElementById(id);
+        if(boton){
+            clases_cambio.forEach(clase => boton.classList.remove(clase));
+            if(id === id_seleccionado){
+                boton.classList.add(clase_aplicar);
+            }
+        }
+    });
+}
+
+const botones_adicionales = ['neblinero', 'portaequipaje', 'cinturones', 'luces', 'camara'];
+
+function activar_boton_adicional(id_boton) {
+    const boton = document.getElementById(id_boton);
+    if (boton) {
+        boton.classList.add('cambio-success');
+    }
+}
+
+function resetear_botones_adicionales() {
+    botones_adicionales.forEach(id => {
+        const boton = document.getElementById(id);
+        if (boton) {
+            boton.classList.remove('cambio-success');
+        }
+    });
+}
+
 var valor_color = 0;
 var valor_agregado = 0;
 var agregados = [];
@@ -26,6 +59,7 @@ if (document.getElementById('auto')) {
         valor_color = 0;
         color = "Blanco";
         boton_color = true;
+        marcar_boton_seleccionado_color('boton-blanco','cambio-blanco');
     });
 
     document.getElementById('boton-rojo').addEventListener('click', function(){
@@ -33,6 +67,7 @@ if (document.getElementById('auto')) {
         valor_color = 400000;
         color = "Rojo";
         boton_color = true;
+        marcar_boton_seleccionado_color('boton-rojo','cambio-rojo');
     });
 
     document.getElementById('boton-negro').addEventListener('click', function(){
@@ -40,6 +75,7 @@ if (document.getElementById('auto')) {
         valor_color = 800000;
         color = "Negro";
         boton_color = true;
+        marcar_boton_seleccionado_color('boton-negro','cambio-negro');
     });
 
     window.addEventListener('load', () => {
@@ -54,6 +90,7 @@ if (document.getElementById('auto')) {
         if (!agregados.includes(item)) {
             valor_agregado += 80000;
             agregados.push(item);
+            activar_boton_adicional('neblinero');
         }
     });
     
@@ -62,6 +99,7 @@ if (document.getElementById('auto')) {
         if (!agregados.includes(item)) {
             valor_agregado += 350000;
             agregados.push(item);
+            activar_boton_adicional('portaequipaje');
         }
     });
 
@@ -70,6 +108,7 @@ if (document.getElementById('auto')) {
         if (!agregados.includes(item)) {
             valor_agregado += 50000;
             agregados.push(item);
+            activar_boton_adicional('cinturones');
         }
     });
 
@@ -78,6 +117,7 @@ if (document.getElementById('auto')) {
         if (!agregados.includes(item)) {
             valor_agregado += 70000;
             agregados.push(item);
+            activar_boton_adicional('luces');
         }
     });
 
@@ -86,12 +126,14 @@ if (document.getElementById('auto')) {
         if (!agregados.includes(item)) {
             valor_agregado += 100000;
             agregados.push(item);
+            activar_boton_adicional('camara');
         }
     });
     
     document.getElementById('reset').addEventListener('click',function(){
         valor_agregado = 0;
         agregados = [];
+        resetear_botones_adicionales();
     });
 
     document.getElementById('comprar').addEventListener('click', function(event){
